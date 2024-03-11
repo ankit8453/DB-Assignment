@@ -20,11 +20,11 @@
     - Use the NOT NULL constraint to ensure that every product must have a valid category 
       assigned (i.e., the “category_id” cannot be null).
  2. Validation Logic in Application Code:
-   - When inserting or updating product records, validate that the provided “category_id” 
-     corresponds to an existing category in the “Product_Category” table.
-   - If the category is not valid, reject the operation or prompt the user to select a valid 
-     category.
+    - When inserting or updating product records, validate that the provided “category_id” 
+      corresponds to an existing category in the “Product_Category” table.
+    - If the category is not valid, reject the operation or prompt the user to select a valid 
+      category.
  3. Regular Data Audits:
-   - And at last periodically audit the data to identify any inconsistencies (e.g., products 
-     with invalid or non-existent category IDs etc).
-   - And correct any discrepancies found during the audit process.
+    - And at last periodically audit the data to identify any inconsistencies (e.g., products 
+      with invalid or non-existent category IDs etc).
+    - And correct any discrepancies found during the audit process.
