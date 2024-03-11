@@ -14,18 +14,17 @@
    To ensure that each product in the “Product” table has a valid category assigned, consider 
    the following steps:
 
-# Data Integrity Constraints: Implement data integrity constraints in the database schema. 
-  Specifically:
+ 1. Data Integrity Constraints: Implement data integrity constraints in the database schema.Specifically:-
     - Set the “category_id” column in the “Product” table as a foreign key referencing the 
       primary key (“category_id”) in the “Product_Category” table.
     - Use the NOT NULL constraint to ensure that every product must have a valid category 
       assigned (i.e., the “category_id” cannot be null).
-# Validation Logic in Application Code:
+ 2. Validation Logic in Application Code:
    - When inserting or updating product records, validate that the provided “category_id” 
      corresponds to an existing category in the “Product_Category” table.
    - If the category is not valid, reject the operation or prompt the user to select a valid 
      category.
-# Regular Data Audits:
+ 3. Regular Data Audits:
    - And at last periodically audit the data to identify any inconsistencies (e.g., products 
      with invalid or non-existent category IDs etc).
    - And correct any discrepancies found during the audit process.
