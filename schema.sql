@@ -31,13 +31,16 @@ CREATE TABLE discount (
 CREATE TABLE product (
     id INT PRIMARY KEY,
     name VARCHAR(255),
-    descRIPTION TEXT,
+    description TEXT,
     SKU VARCHAR(255),
-    category_id INT REFERENCES product_category(id),
-    inventory_id INT REFERENCES product_inventory(id),
+	category_id INT,
+    inventory_id INT,
     price DECIMAL(10, 2),
-    discount_id INT REFERENCES discount(id),
+    discount_id INT,
     created_at TIMESTAMP,
     modified_at TIMESTAMP,
-    deleted_at TIMESTAMP
+    deleted_at TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES product_category(id),
+    FOREIGN KEY (inventory_id) REFERENCES product_inventory(id),
+    FOREIGN KEY (discount_id) REFERENCES discount(id)
 );
